@@ -1,0 +1,11 @@
+date
+swocclient -l
+swocclient -w1
+swocclient -b
+swocclient -w1
+date
+netbckup -w
+swocclient -r
+swocclient -u
+swocclient -i
+date

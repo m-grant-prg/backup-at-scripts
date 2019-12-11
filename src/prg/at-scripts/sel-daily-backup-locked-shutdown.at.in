@@ -1,0 +1,14 @@
+date
+swocclient -l
+swocclient -w1
+swocclient -b
+swocclient -w1
+date
+netbckup -s
+date
+netbckup -d
+swocclient -r
+swocclient -u
+swocclient -i
+date
+at -f @pkgdatadir@/shutdown.at now

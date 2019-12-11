@@ -1,0 +1,62 @@
+NAME
+backup-at-scripts - at scripts for lixbackups backups
+DESCRIPTION
+These scripts are run by the at job scheduler and perform a range of lixbackups
+backups.
+
+A usage example would be:-
+.br
+at -f @pkgdatadir@/adhoc-backup.at now
+
+or using the bash location helper script:-
+.br
+at -f $(backup-at-scripts-location.sh)/adhoc-backup.at now
+FILES
+adhoc-backup.at  full adhoc backup
+adhoc-backup-locked.at  full adhoc backup with swoc locking
+adhoc-backup-locked-shutdown.at  full adhoc backup with swoc locking followed by
+shutdown
+adhoc-backup-shutdown.at  full adhoc backup followed by shutdown
+daily-backup.at  daily backup
+daily-backup-locked.at  daily backup with swoc locking
+daily-backup-locked-shutdown.at  daily backup with swoc locking followed by
+shutdown
+daily-backup-shutdown.at  daily backup followed by shutdown
+sel-backup.at  selective backup
+sel-backup-locked.at  selective backup with swoc locking
+sel-backup-locked-shutdown.at  selective backup with swoc locking followed by
+shutdown
+sel-backup-shutdown.at  selective backup followed by shutdown
+sel-daily-backup.at  selective and daily backup
+sel-daily-backup-locked.at  selective and daily backup with swoc locking
+sel-daily-backup-locked-shutdown.at  selective and daily backup with swoc
+locking followed by shutdown
+sel-daily-backup-shutdown.at  selective and daily backup followed by shutdown
+sel-weekly-backup.at  selective and weekly backup
+sel-weekly-backup-locked.at  selective and weekly backup with swoc locking
+sel-weekly-backup-locked-shutdown.at  selective and weekly backup with swoc
+locking followed by shutdown
+sel-weekly-backup-shutdown.at  selective and weekly backup followed by shutdown
+shutdown.at  shutdown
+weekly-backup.at  weekly backup
+weekly-backup-locked.at  weekly backup with swoc locking
+weekly-backup-locked-shutdown.at  weekly backup with swoc locking followed by
+shutdown
+weekly-backup-shutdown.at  weekly backup followed by shutdown
+AUTHOR
+Written by Mark Grant.
+REPORTING BUGS
+Report bugs to <m.grant.prg@gmail.com>
+COPYRIGHT
+Copyright (C) 2019 Mark Grant.
+.br
+License GPLv3+: GNU GPL version 3 or later
+.br
+<http://gnu.org/licenses/gpl.html>.
+.br
+This is free software: you are free to change and redistribute it.
+.br
+There is NO WARRANTY, to the extent permitted by law.
+SEE ALSO
+backup-at-scripts-location.sh(1)
+

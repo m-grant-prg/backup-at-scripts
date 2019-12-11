@@ -1,0 +1,6 @@
+date
+netbckup -s
+date
+netbckup -w
+date
+at -f @pkgdatadir@/shutdown.at now

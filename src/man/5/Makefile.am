@@ -1,0 +1,52 @@
+#########################################################################
+#									#
+# Script ID: src/man/5/Makefile.am					#
+# Author: Copyright (C) 2019  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0					#
+#									#
+# Purpose:								#
+# AutoMake script file to generate Backup AT Scripts manual pages	#
+# from source.								#
+#									#
+#########################################################################
+
+#########################################################################
+#									#
+# Changelog								#
+#									#
+# Date		Author	Version	Description				#
+#									#
+# 11/12/2019	MG	1.0.1	Initial release.			#
+#									#
+#########################################################################
+
+
+backup-at-scripts.5: Makefile
+	mkdir -p $(@D)
+	rm -f $@ $@.tmp
+	$(edit) $(srcdir)/$(@F).man.in > $@.tmp
+	targfile=$(@F);	\
+	if [[ $$targfile == *"."* ]]; then \
+		if [[ $${targfile##*.} == "" ]]; then \
+			echo "Source file suffix used as section but empty."; \
+			exit 1; \
+		else \
+			section=$${targfile##*.}; \
+		fi; \
+	else \
+		echo "Source file suffix used as section but no dot & empty."; \
+		exit 1; \
+	fi; \
+	txt2manwrap $(@F) $$section "Backup AT Scripts Manual" \
+		$@.tmp $@
+	rm -f $@.tmp
+backup-at-scripts.5: $(srcdir)/backup-at-scripts.5.man.in
+
+man_MANS = backup-at-scripts.5
+
+EXTRA_DIST = $(srcdir)/backup-at-scripts.5.man.in
+
+CLEANFILES = *.tmp backup-at-scripts.5
+

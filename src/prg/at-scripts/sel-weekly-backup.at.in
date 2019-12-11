@@ -1,0 +1,5 @@
+date
+netbckup -s
+date
+netbckup -w
+date
