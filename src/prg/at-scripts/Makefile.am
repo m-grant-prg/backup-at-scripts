@@ -69,7 +69,7 @@ weekly-backup-shutdown.at: $(srcdir)/weekly-backup-shutdown.at.in
 
 
 pkgdata_DATA = adhoc-backup.at adhoc-backup-locked.at \
-	adhoc-backup-locked-shutdown.at adhoc-backup-shutdown.at\
+	adhoc-backup-locked-shutdown.at adhoc-backup-shutdown.at \
 	daily-backup.at daily-backup-locked.at daily-backup-locked-shutdown.at \
 	daily-backup-shutdown.at sel-backup.at sel-backup-locked.at \
 	sel-backup-locked-shutdown.at sel-backup-shutdown.at \
@@ -83,13 +83,13 @@ pkgdata_DATA = adhoc-backup.at adhoc-backup-locked.at \
 
 EXTRA_DIST = $(srcdir)/adhoc-backup.at.in $(srcdir)/adhoc-backup-locked.at.in \
 	$(srcdir)/adhoc-backup-locked-shutdown.at.in \
-	$(srcdir)/adhoc-backup-shutdown.at.in$(srcdir)/daily-backup.at.in \
+	$(srcdir)/adhoc-backup-shutdown.at.in $(srcdir)/daily-backup.at.in \
 	$(srcdir)/daily-backup-locked.at.in \
 	$(srcdir)/daily-backup-locked-shutdown.at.in \
 	$(srcdir)/daily-backup-shutdown.at.in $(srcdir)/sel-backup.at.in \
 	$(srcdir)/sel-backup-locked.at.in \
 	$(srcdir)/sel-backup-locked-shutdown.at.in \
-	$(Srcdir)/sel-backup-shutdown.at.in $(srcdir)/sel-daily-backup.at.in \
+	$(srcdir)/sel-backup-shutdown.at.in $(srcdir)/sel-daily-backup.at.in \
 	$(srcdir)/sel-daily-backup-locked.at.in \
 	$(srcdir)/sel-daily-backup-locked-shutdown.at.in \
 	$(srcdir)/sel-daily-backup-shutdown.at.in \
