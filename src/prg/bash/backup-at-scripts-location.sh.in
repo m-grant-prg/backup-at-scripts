@@ -15,10 +15,14 @@
 # SPDX-License-Identifier: GPL-3.0					#
 #									#
 # Purpose:								#
-# To simplify the running of daily apt-get maintenance commands.	#
+# A helper script which just outputs the location of the at(1) backup	#
+# scripts.								#
 #									#
 # Syntax:	backup-at-scripts-location.sh [ -h || --help ] 		#
 #					   || [ -V || --version ]	#
+#									#
+# Usage example:-							#
+#	at -f $(backup-at-scripts-location.sh)/adhoc-backup.at		#
 #									#
 # Exit codes used:-							#
 # Bash standard Exit Codes:	0 - success				#
@@ -55,6 +59,8 @@
 # Date		Author	Version	Description				#
 #									#
 # 11/12/2019	MG	1.0.1	Created.				#
+# 13/12/2019	NG	1.0.2	Correct file header purpose section and	#
+#				add a usage example.			#
 #									#
 #########################################################################
 
@@ -62,7 +68,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.1				# Script version
+readonly version=1.0.2				# Script version
 readonly outputprefix="$(basename $0): "
 readonly packageversion=@pkgversion@		# Package version
 
