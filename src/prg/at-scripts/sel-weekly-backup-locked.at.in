@@ -1,3 +1,39 @@
+#########################################################################
+#									#
+#	sel-weekly-backup-locked.at is automatically generated,		#
+#		please do not modify!					#
+#									#
+#########################################################################
+
+#########################################################################
+#									#
+# Script ID: sel-weekly-backup-locked.at				#
+# Author: Copyright (C) 2019  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0					#
+#									#
+# Purpose:								#
+# An at(1) job scheduler script to perform a lixbackups selective	#
+# followed by weekly backup with swoc locking.				#
+#									#
+# Usage example:-							#
+# at -f $(backup-at-scripts-location.sh)/sel-weekly-backup-locked.at	#
+#									#
+# Further Info:								#
+#									#
+#########################################################################
+
+#########################################################################
+#									#
+# Changelog								#
+#									#
+# Date		Author	Version	Description				#
+#									#
+# 11/12/2019	MG	1.0.1	Created.				#
+#									#
+#########################################################################
+
 date
 swocclient -l
 swocclient -w1
@@ -11,3 +47,4 @@ swocclient -r
 swocclient -u
 swocclient -i
 date
+
