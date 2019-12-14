@@ -59,7 +59,7 @@ AC_PREREQ([2.69])
 # can be used by ac output and / or the sed setup below to substitute bookmarks
 # in source files.
 #
-AC_INIT([Backup AT Scripts Project], [1.0.1+rc1],
+AC_INIT([Backup AT Scripts Project], [1.0.2],
 	[m.grant.prg@gmail.com], [backup-at-scripts])
 
 AC_MSG_NOTICE(initialisation and setup)
