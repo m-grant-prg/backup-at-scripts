@@ -1,3 +1,7 @@
+2019-12-14 v1.0.2 Mark Grant <m.grant.prg@gmail.com>
+	*  Add file header comments to script files.
+	Add SPDX License identifiers.
+
 2019-12-11 v1.0.1 Mark Grant <m.grant.prg@gmail.com>
 	*  Initial release.
 
