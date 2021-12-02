@@ -9,10 +9,10 @@
 #########################################################################
 #									#
 # Script ID: backup-at-scripts-location.sh				#
-# Author: Copyright (C) 2019  Mark Grant				#
+# Author: Copyright (C) 2019, 2021  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
-# SPDX-License-Identifier: GPL-3.0					#
+# SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 # A helper script which just outputs the location of the at(1) backup	#
@@ -61,6 +61,7 @@
 # 11/12/2019	MG	1.0.1	Created.				#
 # 13/12/2019	NG	1.0.2	Correct file header purpose section and	#
 #				add a usage example.			#
+# 02/12/2021	MG	1.0.3	Tighten SPDX tag.			#
 #									#
 #########################################################################
 
@@ -68,7 +69,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.2				# Script version
+readonly version=1.0.3				# Script version
 readonly outputprefix="$(basename $0): "
 readonly packageversion=@pkgversion@		# Package version
 

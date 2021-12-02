@@ -1,10 +1,10 @@
 #########################################################################
 #									#
 # Script ID: src/man/1/Makefile.am					#
-# Author: Copyright (C) 2019  Mark Grant				#
+# Author: Copyright (C) 2019, 2021  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
-# SPDX-License-Identifier: GPL-3.0					#
+# SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
 # Automake script file to generate backup AT scripts bash manual pages	#
@@ -19,6 +19,7 @@
 # Date		Author	Version	Description				#
 #									#
 # 11/12/2019	MG	1.0.1	Initial release.			#
+# 02/12/2021	MG	1.0.2	Tighten SPDX tag.			#
 #									#
 #########################################################################
 
