@@ -8,8 +8,8 @@
 # Purpose:								#
 # AutoConf script file to configure Backup at(1) Scripts project.	#
 #									#
-# configure cmd line syntax:						#
-# ./configure								#
+# cmd line syntax of standard configure:				#
+# ./configure --help							#
 #									#
 # Layout: (Only relevant sections will exist).				#
 # SECTION  1: Initialisation & Setup					#
