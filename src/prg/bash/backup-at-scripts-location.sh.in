@@ -17,8 +17,7 @@
 # A helper script which just outputs the location of the at(1) backup	#
 # scripts.								#
 #									#
-# Syntax:	backup-at-scripts-location.sh [ -h || --help ] 		#
-#					   || [ -V || --version ]	#
+# Syntax:	See usage().						#
 #									#
 # Usage example:-							#
 #	at -f $(backup-at-scripts-location.sh)/adhoc-backup.at		#
@@ -67,11 +66,13 @@ readonly packageversion=@pkgversion@		# Package version
 # -h --help output.
 # No parameters
 # No return value
-usage ()
+usage()
 {
 cat << EOF
-Usage is $0 [OPTIONS]
-	[OPTIONS] are:-
+Usage is:-
+$(basename "$0") {-h|-V}
+Usage is:-
+$(basename "$0") [OPTIONS]
 	-h or --help Displays usage information
 	-V or --version Displays version information
 EOF
