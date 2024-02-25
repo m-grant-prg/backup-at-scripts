@@ -7,8 +7,7 @@
 
 #########################################################################
 #									#
-# Script ID: sel-weekly-backup-locked.at				#
-# Author: Copyright (C) 2019, 2021  Mark Grant				#
+# Author: Copyright (C) 2019, 2021, 2024  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -26,14 +25,10 @@
 
 #########################################################################
 #									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 11/12/2019	MG	1.0.1	Created.				#
-# 02/12/2021	MG	1.0.2	Tighten SPDX tag.			#
+# Version	v1.0.3							#
 #									#
 #########################################################################
+
 
 date
 swocclient -l

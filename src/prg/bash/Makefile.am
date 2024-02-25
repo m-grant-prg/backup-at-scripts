@@ -1,7 +1,6 @@
 #########################################################################
 #									#
-# Script ID: src/prg/bash/Makefile.am					#
-# Author: Copyright (C) 2019, 2021  Mark Grant				#
+# Author: Copyright (C) 2019, 2021, 2024  Mark Grant			#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -9,17 +8,6 @@
 # Purpose:								#
 # Automake script file to generate at backup script location helper	#
 # script from source.							#
-#									#
-#########################################################################
-
-#########################################################################
-#									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 11/12/2019	MG	1.0.1	Initial release.			#
-# 02/12/2021	MG	1.0.2	Tighten SPDX tag.			#
 #									#
 #########################################################################
 

@@ -1,7 +1,6 @@
 #########################################################################
 #									#
-# Script ID: ./Makefile.am						#
-# Author: Copyright (C) 2019, 2021, 2023  Mark Grant			#
+# Author: Copyright (C) 2019, 2021, 2023, 2024  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -9,19 +8,6 @@
 # Purpose:								#
 # AutoMake script file to generate Backup at(1) Scripts project from	#
 # source.								#
-#									#
-#########################################################################
-
-#########################################################################
-#									#
-# Changelog								#
-#									#
-# Date		Author	Version	Description				#
-#									#
-# 11/12/2019	MG	1.0.1	Initial release.			#
-# 08/11/2021	MG	1.0.2	Add misc directory to DIST.		#
-# 02/12/2021	MG	1.0.3	Tighten SPDX tag.			#
-# 16/08/2023	MG	1.0.4	Enable use of v1.1.1~rc1 type vesrion	#
 #									#
 #########################################################################
 
