@@ -1,3 +1,23 @@
+2024-04-08 v1.1.2 Mark Grant <m.grant.prg@gmail.com>
+	* build(deps): bump actions/checkout from 2 to 4
+	dependabot[bot] (1):
+	bash: Silence trap function unreachable code warning
+	bash: Double quote to prevent globbing and word splitting
+	bash: Remove unused variable
+	at: Improve CL syntax description
+	man: Update CL syntax
+	bash: Improve CL syntax description
+	all: Remove most in-file ChangeLogs and versioning
+	git: Update mailmap to v1.0.4
+	git: Update gitignore to v1.0.12
+	git: Update gitattributes to v1.0.5
+	editors: Update editorconfig to v1.0.6
+	git: Standardise on non-root gitignore file formats
+	at: Upgrade bootstrap.sh to v1.6.0
+	Merge pull request #1 from m-grant-prg/dependabot/github_actions/actions/checkout-4
+	github: Add dependabot version update config
+	Mark Grant (17):
+
 2023-08-16 v1.1.1 Mark Grant <m.grant.prg@gmail.com>
 	* at: Support ~ in version numbers
 	actions: Remove txt2man, rely on txt2manwrap dependencies
