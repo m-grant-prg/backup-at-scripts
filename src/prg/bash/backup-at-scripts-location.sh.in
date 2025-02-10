@@ -8,7 +8,7 @@
 
 #########################################################################
 #									#
-# Author: Copyright (C) 2019, 2021, 2024  Mark Grant			#
+# Author: Copyright (C) 2019, 2021, 2024, 2025  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -54,7 +54,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.4				# Script version
+readonly version=1.0.5				# Script version
 readonly packageversion=@pkgversion@		# Package version
 
 
@@ -178,7 +178,7 @@ proc_CL()
 
 proc_CL "$@"
 
-printf "@pkgdatadir@\n"
+printf "@pkglibexecdir@\n"
 
 script_exit 0
 

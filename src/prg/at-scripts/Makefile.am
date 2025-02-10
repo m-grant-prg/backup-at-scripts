@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-# Author: Copyright (C) 2019, 2021, 2024  Mark Grant			#
+# Author: Copyright (C) 2019, 2021, 2024, 2025  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -57,7 +57,7 @@ weekly-backup-locked-shutdown.at: $(srcdir)/weekly-backup-locked-shutdown.at.in
 weekly-backup-shutdown.at: $(srcdir)/weekly-backup-shutdown.at.in
 
 
-pkgdata_DATA = adhoc-backup.at adhoc-backup-locked.at \
+pkglibexec_SCRIPTS = adhoc-backup.at adhoc-backup-locked.at \
 	adhoc-backup-locked-shutdown.at adhoc-backup-shutdown.at \
 	daily-backup.at daily-backup-locked.at daily-backup-locked-shutdown.at \
 	daily-backup-shutdown.at sel-backup.at sel-backup-locked.at \
