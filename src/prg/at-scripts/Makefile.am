@@ -91,5 +91,5 @@ EXTRA_DIST = $(srcdir)/adhoc-backup.at.in $(srcdir)/adhoc-backup-locked.at.in \
 	$(srcdir)/weekly-backup-shutdown.at.in
 
 
-CLEANFILES = *.tmp *.in *.at
+CLEANFILES = *.tmp *.at
 
