@@ -28,7 +28,7 @@ Written by Mark Grant.
 REPORTING BUGS
 Report bugs to <m.grant.prg@gmail.com>
 COPYRIGHT
-Copyright (C) 2019, 2021, 2024 Mark Grant.
+Copyright (C) 2019, 2021, 2024, 2025 Mark Grant.
 .br
 License GPLv3: GNU GPL version 3 only
 .br
@@ -38,5 +38,5 @@ This is free software: you are free to change and redistribute it.
 .br
 There is NO WARRANTY, to the extent permitted by law.
 SEE ALSO
-backup-at-scripts(5)
+backup-at-scripts(5) backup-at-scripts-launcher.sh(1)
 
