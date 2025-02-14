@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-#	sel-daily-backup.at is automatically generated,			#
+#	diff-backup-locked-shutdown.at is automatically generated,	#
 #		please do not modify!					#
 #									#
 #########################################################################
@@ -13,11 +13,12 @@
 # SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
-# An at(1) job scheduler script to perform a lixbackups selective	#
-# followed by daily backup.						#
+# An at(1) job scheduler script to perform a lixbackups diff backup	#
+# with swoc locking followed by shutdown.				#
 #									#
 # Usage example:-							#
-#	at -f $(backup-at-scripts-location.sh)/sel-daily-backup.at	#
+#	at -f \								#
+# $(backup-at-scripts-location.sh)/diff-backup-locked-shutdown.at	#
 #									#
 # Further Info:								#
 #									#
@@ -25,14 +26,21 @@
 
 #########################################################################
 #									#
-# Version	v1.0.3							#
+# Version	v1.0.4							#
 #									#
 #########################################################################
 
 
 date
-netbckup -s
+swocclient -l
+swocclient -w1
+swocclient -b
+swocclient -w1
 date
 netbckup -d
+swocclient -r
+swocclient -u
+swocclient -i
 date
+at -f @pkgdatadir@/shutdown.at now
 

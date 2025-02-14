@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-#	daily-backup-locked.at is automatically generated,		#
+#	diff-backup.at is automatically generated,			#
 #		please do not modify!					#
 #									#
 #########################################################################
@@ -13,11 +13,10 @@
 # SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
-# An at(1) job scheduler script to perform a lixbackups daily backup	#
-# with swoc locking.							#
+# An at(1) job scheduler script to perform a lixbackups diff backup.	#
 #									#
 # Usage example:-							#
-#	at -f $(backup-at-scripts-location.sh)/daily-backup-locked.at	#
+#	at -f $(backup-at-scripts-location.sh)/diff-backup.at		#
 #									#
 # Further Info:								#
 #									#
@@ -25,20 +24,12 @@
 
 #########################################################################
 #									#
-# Version	v1.0.3							#
+# Version	v1.0.4							#
 #									#
 #########################################################################
 
 
 date
-swocclient -l
-swocclient -w1
-swocclient -b
-swocclient -w1
-date
 netbckup -d
-swocclient -r
-swocclient -u
-swocclient -i
 date
 

@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-#	sel-daily-backup-locked-shutdown.at is automatically generated,	#
+#	sel-diff-backup-locked-shutdown.at is automatically generated,	#
 #		please do not modify!					#
 #									#
 #########################################################################
@@ -14,11 +14,11 @@
 #									#
 # Purpose:								#
 # An at(1) job scheduler script to perform a lixbackups selective	#
-# followed by daily backup with swoc locking followed by shutdown.	#
+# followed by diff backup with swoc locking followed by shutdown.	#
 #									#
 # Usage example:-							#
 #	at -f \								#
-# $(backup-at-scripts-location.sh)/sel-daily-backup-locked-shutdown.at	#
+# $(backup-at-scripts-location.sh)/sel-diff-backup-locked-shutdown.at	#
 #									#
 # Further Info:								#
 #									#
@@ -26,7 +26,7 @@
 
 #########################################################################
 #									#
-# Version	v1.0.3							#
+# Version	v1.0.4							#
 #									#
 #########################################################################
 
