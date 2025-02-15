@@ -276,8 +276,7 @@ AC_MSG_NOTICE(processing output files)
 AC_CONFIG_FILES([Makefile
 		src/prg/at-scripts/Makefile
 		src/prg/bash/Makefile
-		src/man/1/Makefile
-		src/man/5/Makefile])
+		src/man/1/Makefile])
 
 AC_OUTPUT
 

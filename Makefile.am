@@ -1,6 +1,6 @@
 #########################################################################
 #									#
-# Author: Copyright (C) 2019, 2021, 2023, 2024  Mark Grant		#
+# Author: Copyright (C) 2019, 2021, 2023, 2024, 2025  Mark Grant	#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -19,7 +19,7 @@ AM_DISTCHECK_CONFIGURE_FLAGS =
 
 
 SUBDIRS = src/prg/at-scripts src/prg/bash
-SUBDIRS += src/man/1 src/man/5
+SUBDIRS += src/man/1
 
 
 doc_DATA = AUTHORS ChangeLog COPYING NEWS README
