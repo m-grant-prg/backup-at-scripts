@@ -1,3 +1,4 @@
+#! @bashlocation@
 #########################################################################
 #									#
 #	diff-backup-shutdown.at is automatically generated,		#
@@ -7,17 +8,18 @@
 
 #########################################################################
 #									#
-# Author: Copyright (C) 2019, 2021, 2024  Mark Grant			#
+# Author: Copyright (C) 2019, 2021, 2024, 2025  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
 #									#
 # Purpose:								#
-# An at(1) job scheduler script to perform a lixbackups diff backup	#
-# followed by shutdown.							#
+# An at(1) job scheduler script / bash script to perform a lixbackups	#
+# diff backup followed by shutdown.					#
 #									#
 # Usage example:-							#
-#	at -f $(backup-at-scripts-location.sh)/diff-backup-shutdown.at	#
+# backup-at-scripts-launcher,sh \					#
+#	$(backup-at-scripts-location.sh)/diff-backup-shutdown.at now	#
 #									#
 # Further Info:								#
 #									#
@@ -25,13 +27,30 @@
 
 #########################################################################
 #									#
-# Version	v1.0.4							#
+# Version	v1.1.0							#
 #									#
 #########################################################################
 
 
+real_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+script_name=$(basename "$0")
+
+run_parts_dir_pre="$real_path/${script_name%.at}.d/pre"
+run_parts_dir_post="$real_path/${script_name%.at}.d/post"
+
 date
-netbckup -d
+if [[ -d "$run_parts_dir_pre" ]]; then
+	run-parts "$run_parts_dir_pre"
+fi
+
 date
-at -f @pkgdatadir@/shutdown.at now
+@pkglibexecdir@/diff-backup.at
+
+date
+if [[ -d "$run_parts_dir_post" ]]; then
+	run-parts "$run_parts_dir_post"
+fi
+
+date
+backup-at-scripts-launcher.sh @pkglibexecdir@/shutdown.at now
 
