@@ -38,10 +38,10 @@ run_parts_dir_pre="$real_path/${script_name%.at}.d/pre"
 run_parts_dir_post="$real_path/${script_name%.at}.d/post"
 
 date
+
 if [[ -d "$run_parts_dir_pre" ]]; then
 	run-parts "$run_parts_dir_pre"
 fi
 
-date
 shutdown -P +1
 

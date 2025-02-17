@@ -39,30 +39,29 @@ run_parts_dir_pre="$real_path/${script_name%.at}.d/pre"
 run_parts_dir_post="$real_path/${script_name%.at}.d/post"
 
 date
+
 swocclient -l
 swocclient -w1
 swocclient -b
 swocclient -w1
 
-date
 if [[ -d "$run_parts_dir_pre" ]]; then
 	run-parts "$run_parts_dir_pre"
 fi
 
-date
 @pkglibexecdir@/sel-backup.at
 
 date
+
 @pkglibexecdir@/diff-backup.at
 
 date
+
 if [[ -d "$run_parts_dir_post" ]]; then
 	run-parts "$run_parts_dir_post"
 fi
 
-date
 swocclient -r
 swocclient -u
 swocclient -i
-date
 
