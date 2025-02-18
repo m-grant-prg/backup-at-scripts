@@ -32,25 +32,7 @@
 #########################################################################
 
 
-real_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-script_name=$(basename "$0")
-
-run_parts_dir_pre="$real_path/${script_name%.at}.d/pre"
-run_parts_dir_post="$real_path/${script_name%.at}.d/post"
-
-date
-
-if [[ -d "$run_parts_dir_pre" ]]; then
-	run-parts "$run_parts_dir_pre"
-fi
-
 @pkglibexecdir@/diff-backup-locked.at
-
-date
-
-if [[ -d "$run_parts_dir_post" ]]; then
-	run-parts "$run_parts_dir_post"
-fi
 
 backup-at-scripts-launcher.sh @pkglibexecdir@/shutdown.at now
 
