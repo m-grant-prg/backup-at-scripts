@@ -32,7 +32,7 @@
 #########################################################################
 
 
-@pkglibexecdir@/sel-backup-locked-locked.at
+@pkglibexecdir@/sel-backup-locked.at
 
 backup-at-scripts-launcher.sh @pkglibexecdir@/shutdown.at now
 
