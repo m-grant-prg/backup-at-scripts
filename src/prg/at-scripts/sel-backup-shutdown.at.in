@@ -32,7 +32,11 @@
 #########################################################################
 
 
+echo "Started processing $0" | ts '[%a %d %b %H:%M:%S]'
+
 @pkglibexecdir@/sel-backup.at
+
+echo "Finished processing $0" | ts '[%a %d %b %H:%M:%S]'
 
 backup-at-scripts-launcher.sh @pkglibexecdir@/shutdown.at now
 

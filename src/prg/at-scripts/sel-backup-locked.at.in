@@ -32,6 +32,8 @@
 #########################################################################
 
 
+echo "Started processing $0" | ts '[%a %d %b %H:%M:%S]'
+
 swocclient -l
 swocclient -w1
 swocclient -b
@@ -41,4 +43,6 @@ swocclient -w1
 
 swocclient -u
 swocclient -r
+
+echo "Finished processing $0" | ts '[%a %d %b %H:%M:%S]'
 

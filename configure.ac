@@ -181,6 +181,11 @@ if test "x$AT" = "xno" ; then
 	AC_MSG_WARN(at not found - needed at run time)
 fi
 
+AC_CHECK_PROG(TS, ts, yes, no)
+if test "x$TS" = "xno" ; then
+	AC_MSG_WARN(ts not found - needed at run time)
+fi
+
 
 #################################################
 #						#
