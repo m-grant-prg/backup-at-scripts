@@ -166,19 +166,19 @@ if test "x$BASH" = "xno" ; then
 fi
 
 AC_MSG_NOTICE(checking for particular programs required at run time)
-AC_CHECK_PROG(PRINTF, printf, yes, no)
-if test "x$PRINTF" = "xno" ; then
-	AC_MSG_WARN(printf not found - needed at run time)
+AC_CHECK_PROG(AT, at, yes, no)
+if test "x$AT" = "xno" ; then
+	AC_MSG_WARN(at not found - needed at run time)
 fi
 
-AC_CHECK_PROG([GETOPT], [getopt], [yes], [no])
+AC_CHECK_PROG(GETOPT, getopt, yes, no)
 if test "x$GETOPT" = "xno" ; then
 	AC_MSG_WARN(getopt not found - needed at run time)
 fi
 
-AC_CHECK_PROG(AT, at, yes, no)
-if test "x$AT" = "xno" ; then
-	AC_MSG_WARN(at not found - needed at run time)
+AC_CHECK_PROG(PRINTF, printf, yes, no)
+if test "x$PRINTF" = "xno" ; then
+	AC_MSG_WARN(printf not found - needed at run time)
 fi
 
 AC_CHECK_PROG(TS, ts, yes, no)
