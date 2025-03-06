@@ -1,3 +1,13 @@
+Release 1.2.0 2025-03-06
+Add a launcher helper. It provides a mechanism to launch remote scripts in a
+bash environment.
+Rename daily scripts to differential which is a more accurate description.
+Convert all at scripts to use bash.
+The scripts now look to a <Script_Name>.d sub-directory to perform a run-parts
+on. User provided scripts may be placed here to run before or after the script
+of the same root name.
+For technical change information please see the ChangeLog.
+
 Release 1.1.2 2024-04-08
 No user-visible changes.
 For technical change information please see the ChangeLog.
