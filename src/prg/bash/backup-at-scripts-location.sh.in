@@ -54,7 +54,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.5				# Script version
+readonly version=1.0.6				# Script version
 readonly packageversion=@pkgversion@		# Package version
 
 
@@ -71,7 +71,7 @@ cat << EOF
 Usage is:-
 $(basename "$0") {-h|-V}
 Usage is:-
-$(basename "$0") [OPTIONS]
+$(basename "$0") [options]
 	-h or --help Displays usage information
 	-V or --version Displays version information
 EOF

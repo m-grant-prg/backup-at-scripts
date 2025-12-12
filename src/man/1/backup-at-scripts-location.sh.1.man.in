@@ -4,7 +4,8 @@ SYNOPSIS
 backup-at-scripts-location.sh {-h|-V}
 backup-at-scripts-location.sh [OPTIONS]
 DESCRIPTION
-A helper script which merely outputs the location of the lixbackups backup scripts run by the at job scheduler.
+A helper script which merely outputs the location of the lixbackups backup
+scripts run by the at job scheduler.
 
 So, instead of having to know the location to run the script as in:-
 .br
