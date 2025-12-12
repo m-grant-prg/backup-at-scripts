@@ -15,14 +15,14 @@ eg
 backup-at-scripts-launcher.sh \\
 .br
 .RS
-.RS
-		"$(backup-at-scripts-location.sh)/adhoc-backup.at" "now"
-.RE
+		"$(backup-at-scripts-location.sh)/adhoc-backup.at" \\
+.br
+			"now + 2 minutes"
 .RE
 
 OPTIONS
 SCRIPT_NAME  The backup-at-script to run
-TIMESPEC  A man at(1) timespec, often just now
+TIMESPEC  A man at(1) timespec, often just "now"
 -h, --help  prints usage information
 
 -V, --version  prints version information

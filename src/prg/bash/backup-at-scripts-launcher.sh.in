@@ -55,7 +55,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.1				# Script version
+readonly version=1.0.2				# Script version
 readonly packageversion=@pkgversion@		# Package version
 
 
@@ -72,9 +72,10 @@ cat << EOF
 Usage is:-
 $(basename "$0") SCRIPT_NAME TIMESPEC
 $(basename "$0") {-h|-V}
+Usage is:-
 $(basename "$0") [options]
 	SCRIPT_NAME The backup-at-script to run
-	TIMESPEC A man at(1) timespec, often just now
+	TIMESPEC A man at(1) timespec, often just "now"
 	-h or --help Displays usage information
 	-V or --version Displays version information
 EOF
