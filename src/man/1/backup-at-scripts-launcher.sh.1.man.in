@@ -1,9 +1,9 @@
 NAME
 backup-at-scripts-launcher.sh - Launch a backup script helper script
 SYNOPSIS
-backup-at-scripts-launcher.sh SCRIPT_NAME TIMESPEC
 backup-at-scripts-launcher.sh {-h|-V}
-backup-at-scripts-launcher.sh [OPTIONS]
+backup-at-scripts-launcher.sh -t TIMESPEC SCRIPT_NAME
+backup-at-scripts-launcher.sh [options]
 
 DESCRIPTION
 A helper script which invokes the at command ensuring that the supplied script
@@ -12,20 +12,23 @@ scripting in the backup-at-scripts script.
 
 eg
 .br
-backup-at-scripts-launcher.sh \\
+backup-at-scripts-launcher.sh --timespec "now + 2 minutes" \\
 .br
 .RS
-		"$(backup-at-scripts-location.sh)/adhoc-backup.at" \\
-.br
-			"now + 2 minutes"
+	"$(backup-at-scripts-location.sh)/adhoc-backup.at"
 .RE
 
 OPTIONS
-SCRIPT_NAME  The backup-at-script to run
-TIMESPEC  A man at(1) timespec, often just "now"
 -h, --help  prints usage information
 
+-t, --timespec  TIMESPEC  A man at(1) timespec, often just "now".
+.br
+.RS
+This is a mandatory option.
+.RE
+
 -V, --version  prints version information
+SCRIPT_NAME  The backup-at-script to run
 
 EXIT STATUS
 0 - Success
