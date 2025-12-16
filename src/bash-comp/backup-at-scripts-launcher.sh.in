@@ -1,0 +1,54 @@
+# shellcheck shell=bash
+#########################################################################
+#									#
+# Author: Copyright (C) 2025  Mark Grant				#
+#									#
+# Released under the GPLv3 only.					#
+# SPDX-License-Identifier: GPL-3.0-only					#
+#									#
+# Purpose:								#
+# Bash completion script.						#
+#									#
+#########################################################################
+
+
+set -o pipefail
+
+
+_backup_at_scripts_launcher.sh()
+{
+	local cur OPTS prev
+	local i work_dir
+	local scriptloc=@pkglibexecdir@
+	readonly scriptloc
+
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+	work_dir=$(pwd)
+	if [[ -d $scriptloc ]]; then
+		cd "$scriptloc" || return
+	fi
+
+	OPTS="-h -t -V"
+	OPTS+=" --help --timespec --version"
+	if [[ ${prev} == "backup-at-scripts-launcher.sh" ]]; then
+		# shellcheck disable=SC2207  # This is _the_ bash completion
+		# pattern, so leave it be.
+		COMPREPLY=( $(compgen -W "${OPTS[*]}" -- "$cur") )
+	else
+		# shellcheck disable=SC2207  # This is _the_ bash completion
+		# pattern, so leave it be.
+		COMPREPLY=( $(compgen -f -- "${cur}") )
+		for i in "${!COMPREPLY[@]}"; do
+			COMPREPLY[i]=$(realpath "${COMPREPLY[i]}")
+		done
+	fi
+
+	cd "$work_dir" || return
+
+	return 0
+}
+complete -F _backup_at_scripts_launcher.sh backup-at-scripts-launcher.sh
+
