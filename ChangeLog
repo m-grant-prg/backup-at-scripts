@@ -1,3 +1,21 @@
+2025-12-16 v1.3.0 Mark Grant <m.grant.prg@gmail.com>
+	* build(deps): bump actions/checkout from 5 to 6
+	build(deps): bump actions/checkout from 4 to 5
+dependabot[bot] (2):
+
+	bash-comp: Add bash completion
+	bash: man: Very minor formatting cleanup
+	bash: man: Make TIMESPEC an option argument
+	bash: man: Make TIMESPEC example more useful
+	Merge pull request #5 from m-grant-prg/dependabot/github_actions/tip/actions/checkout-6
+	at: Upgrade bootstrap.sh to v1.6.2
+	at: Upgrade bootstrap.sh to v1.6.1
+	Merge pull request #3 from m-grant-prg/dependabot/github_actions/tip/actions/checkout-5
+	v1.3.0-rc1
+	actions: Run on Noble
+	actions: Set dependabot to target stable and old stable branches
+Mark Grant (11):
+
 2025-03-06 v1.2.0 Mark Grant <m.grant.prg@gmail.com>
 	* at: Re-order program checks alphabetically
 	at: at-scripts: Add timestamps and remove date command
