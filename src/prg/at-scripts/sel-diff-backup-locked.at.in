@@ -18,8 +18,8 @@
 # selective followed by diff backup with swoc locking.			#
 #									#
 # Usage example:-							#
-# backup-at-scripts-launcher,sh \					#
-# $(backup-at-scripts-location.sh)/sel-diff-backup-locked.at now	#
+# backup-at-scripts-launcher.sh -t now \				#
+# $(backup-at-scripts-location.sh)/sel-diff-backup-locked.at		#
 #									#
 # Further Info:								#
 #									#
@@ -27,7 +27,7 @@
 
 #########################################################################
 #									#
-# Version	v1.1.0							#
+# Version	v1.1.1							#
 #									#
 #########################################################################
 

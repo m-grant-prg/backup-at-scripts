@@ -17,8 +17,8 @@
 # An at(1) job scheduler script / bash script to perform a shutdown.	#
 #									#
 # Usage example:-							#
-#	backup-at-scripts-launcher,sh \					#
-#		$(backup-at-scripts-location.sh)/shutdown.at now	#
+#	backup-at-scripts-launcher.sh -t now \				#
+#		$(backup-at-scripts-location.sh)/shutdown.at		#
 #									#
 # Further Info:								#
 #									#
@@ -26,7 +26,7 @@
 
 #########################################################################
 #									#
-# Version	v1.1.0							#
+# Version	v1.1.1							#
 #									#
 #########################################################################
 

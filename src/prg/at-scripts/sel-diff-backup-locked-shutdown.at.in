@@ -19,9 +19,8 @@
 # shutdown.								#
 #									#
 # Usage example:-							#
-# backup-at-scripts-launcher,sh \					#
-# $(backup-at-scripts-location.sh)/sel-diff-backup-locked-shutdown.at \	#
-#	now								#
+# backup-at-scripts-launcher.sh -t now \				#
+# $(backup-at-scripts-location.sh)/sel-diff-backup-locked-shutdown.at	#
 #									#
 # Further Info:								#
 #									#
@@ -29,7 +28,7 @@
 
 #########################################################################
 #									#
-# Version	v1.1.0							#
+# Version	v1.1.1							#
 #									#
 #########################################################################
 
@@ -40,5 +39,5 @@ echo "Started processing $0" | ts '[%a %d %b %H:%M:%S]'
 
 echo "Finished processing $0" | ts '[%a %d %b %H:%M:%S]'
 
-backup-at-scripts-launcher.sh @pkglibexecdir@/shutdown.at now
+backup-at-scripts-launcher.sh -t now @pkglibexecdir@/shutdown.at
 
