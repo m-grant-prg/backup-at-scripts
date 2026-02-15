@@ -1,3 +1,12 @@
+2026-02-15 v1.3.2 Mark Grant <m.grant.prg@gmail.com>
+	* bash-comp: Use standard method of handling filenames
+	at: Upgrade bootstrap.sh to v1.7.0
+	at: Add sign_tarball target
+	at: Leave source tarball name same as distribution tarball
+	at: Update Copyright for 2026
+	at: Correct Copyright dates, checked via git
+Mark Grant (6):
+
 2025-12-19 v1.3.1 Mark Grant <m.grant.prg@gmail.com>
 	* at-scripts: Use new launcher CL
 Mark Grant (1)
