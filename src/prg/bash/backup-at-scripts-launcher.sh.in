@@ -8,7 +8,7 @@
 
 #########################################################################
 #									#
-# Author: Copyright (C) 2025  Mark Grant				#
+# Author: Copyright (C) 2025, 2026  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -55,7 +55,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.2				# Script version
+readonly version=1.0.3				# Script version
 readonly packageversion=@pkgversion@		# Package version
 timespec=""
 
@@ -194,7 +194,7 @@ proc_CL()
 
 proc_CL "$@"
 
-at "$timespec" <<< "bash $script_name"
+at "$timespec" <<< "bash \"$script_name\""
 
 script_exit 0
 

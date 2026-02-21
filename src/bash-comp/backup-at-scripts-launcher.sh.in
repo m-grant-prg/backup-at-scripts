@@ -1,7 +1,7 @@
 # shellcheck shell=bash
 #########################################################################
 #									#
-# Author: Copyright (C) 2025  Mark Grant				#
+# Author: Copyright (C) 2025, 2026  Mark Grant				#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -28,7 +28,9 @@ _backup_at_scripts_launcher.sh()
 
 	work_dir=$(pwd)
 	if [[ -d $scriptloc ]]; then
-		cd "$scriptloc" || return
+		# shellcheck disable=SC2164  # We want to fall through if cd
+		# fails.
+		cd "$scriptloc" 2>/dev/null
 	fi
 
 	OPTS="-h -t -V"
@@ -38,6 +40,8 @@ _backup_at_scripts_launcher.sh()
 		# pattern, so leave it be.
 		COMPREPLY=( $(compgen -W "${OPTS[*]}" -- "$cur") )
 	else
+		local IFS=$'\n'
+		compopt -o filenames
 		# shellcheck disable=SC2207  # This is _the_ bash completion
 		# pattern, so leave it be.
 		COMPREPLY=( $(compgen -f -- "${cur}") )
