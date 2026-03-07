@@ -1,3 +1,11 @@
+2026-03-07 v1.3.3 Mark Grant <m.grant.prg@gmail.com>
+	* at: Upgrade bootstrap.sh to v1.7.1
+	at: Remove old signature file before creating a new one
+	v1.3.3-rc1
+	bash-comp: bash: Fix filenames with special characters
+	bash-comp: Revert "bash-comp: Use standard method of handling filenames"
+Mark Grant (5):
+
 2026-02-15 v1.3.2 Mark Grant <m.grant.prg@gmail.com>
 	* bash-comp: Use standard method of handling filenames
 	at: Upgrade bootstrap.sh to v1.7.0
