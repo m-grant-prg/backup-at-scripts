@@ -8,7 +8,7 @@
 
 #########################################################################
 #									#
-# Author: Copyright (C) 2019, 2021, 2024, 2025  Mark Grant		#
+# Author: Copyright (C) 2019, 2021, 2024-2026  Mark Grant		#
 #									#
 # Released under the GPLv3 only.					#
 # SPDX-License-Identifier: GPL-3.0-only					#
@@ -26,7 +26,7 @@
 
 #########################################################################
 #									#
-# Version	v1.1.1							#
+# Version	v1.1.2							#
 #									#
 #########################################################################
 
@@ -37,7 +37,6 @@ real_path="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 script_name=$(basename "$0")
 
 run_parts_dir_pre="$real_path/${script_name%.at}.d/pre"
-run_parts_dir_post="$real_path/${script_name%.at}.d/post"
 
 if [[ -d "$run_parts_dir_pre" ]]; then
 	run-parts "$run_parts_dir_pre"
