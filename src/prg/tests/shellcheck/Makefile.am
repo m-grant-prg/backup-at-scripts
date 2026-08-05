@@ -11,21 +11,32 @@
 #########################################################################
 
 
-run-shellcheck.sh: Makefile
+run-dot-at-dot-in-pattern.sh run-dot-sh-dot-in-pattern.sh \
+	shellcheck-dot-xx-dot-in-pattern.sh \
+	shellcheck-inline-dot-sh.sh: Makefile
 	mkdir -p $(@D)
 	rm -f $@ $@.tmp
 	test -f ./$@.in || srcdir=$(srcdir)/; \
 	$(edit) $${srcdir}$(@).in > $@.tmp
 	mv $@.tmp $@
 	chmod a+x $@
-run-shellcheck.sh: $(srcdir)/run-shellcheck.sh.in
+run-dot-at-dot-in-pattern.sh: $(srcdir)/run-dot-at-dot-in-pattern.sh.in
+run-dot-sh-dot-in-pattern.sh: $(srcdir)/run-dot-sh-dot-in-pattern.sh.in
+shellcheck-dot-xx-dot-in-pattern.sh: \
+	$(srcdir)/shellcheck-dot-xx-dot-in-pattern.sh.in
+shellcheck-inline-dot-sh.sh: $(srcdir)/shellcheck-inline-dot-sh.sh.in
 
 
-check_DATA = run-shellcheck.sh
+check_DATA = run-dot-at-dot-in-pattern.sh run-dot-sh-dot-in-pattern.sh \
+	     shellcheck-dot-xx-dot-in-pattern.sh shellcheck-inline-dot-sh.sh
 
 
-EXTRA_DIST = $(srcdir)/run-shellcheck.sh.in
+EXTRA_DIST =  $(srcdir)/run-dot-at-dot-in-pattern.sh.in \
+	      $(srcdir)/run-dot-sh-dot-in-pattern.sh.in \
+	      $(srcdir)/shellcheck-dot-xx-dot-in-pattern.sh.in \
+	      $(srcdir)/shellcheck-inline-dot-sh.sh.in
 
 
-CLEANFILES = *.tmp run-shellcheck.sh
+CLEANFILES = *.tmp run-dot-at-dot-in-pattern.sh run-dot-sh-dot-in-pattern.sh \
+	     shellcheck-dot-xx-dot-in-pattern.sh shellcheck-inline-dot-sh.sh
 
