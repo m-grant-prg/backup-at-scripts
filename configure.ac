@@ -185,6 +185,11 @@ AC_MSG_NOTICE(checking for some standard AutoTools required programs)
 AC_PROG_INSTALL
 
 AC_MSG_NOTICE(checking for particular programs required by this build)
+AC_PATH_PROG([ENV], [env], [no])
+if test "x$ENV" = "xno" ; then
+	AC_MSG_ERROR([env not found])
+fi
+
 AC_CHECK_PROG([SHELLCHECK], [shellcheck], [yes], [no])
 if test "x$SHELLCHECK" = "xno" ; then
 	AC_MSG_ERROR([shellcheck not found])
@@ -327,6 +332,7 @@ AC_SUBST([edit], ["$SED \
 		-e 's|@abstopsrcdir[@]|\$(abs_top_srcdir)|g' \
 		-e 's|@abstopbuilddir[@]|\$(abs_top_builddir)|g' \
 		-e 's|@bashlocation[@]|\$(BASH)|g' \
+		-e 's|@envlocation[@]|\$(ENV)|g' \
 		-e 's|@pkgversion[@]|\$(pkgversion)|g' \
 		-e 's|@prefix[@]|\$(prefix)|g' \
 		-e 's|@exec_prefix[@]|\$(exec_prefix)|g' \

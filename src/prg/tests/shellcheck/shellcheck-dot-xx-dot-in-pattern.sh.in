@@ -1,4 +1,4 @@
-#! @bashlocation@
+#! @envlocation@ bash
 #########################################################################
 #									#
 #	script shellcheck-dot-xx-dot-in-pattern.sh is automatically	#
@@ -58,7 +58,7 @@ cd "$(dirname "$0")"
 # Init variables #
 ##################
 # shellcheck disable=SC2034		# Unused variable left, possibly useful
-readonly version=1.0.0			# set version variable
+readonly version=1.0.1			# set version variable
 # shellcheck disable=SC2034		# Unused variable left, possibly useful
 readonly packageversion=@pkgversion@	# Version of the complete package
 

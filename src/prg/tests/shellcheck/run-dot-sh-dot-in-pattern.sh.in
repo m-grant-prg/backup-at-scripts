@@ -1,4 +1,4 @@
-#! @bashlocation@
+#! @envlocation@ bash
 
 set -euo pipefail
 
