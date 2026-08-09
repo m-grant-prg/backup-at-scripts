@@ -1,4 +1,4 @@
-#! @bashlocation@
+#! @envlocation@ bash
 #########################################################################
 #									#
 #	backup-at-scripts-launcher.sh is automatically generated,	#
@@ -55,7 +55,7 @@
 ##################
 # Init variables #
 ##################
-readonly version=1.0.4				# Script version
+readonly version=1.0.5				# Script version
 readonly packageversion=@pkgversion@		# Package version
 timespec=""
 
